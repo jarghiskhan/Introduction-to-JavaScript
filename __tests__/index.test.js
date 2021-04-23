@@ -61,7 +61,7 @@ describe('feetFunction', ()=>{
     })
 });
 describe('annoyingSongFunction', ()=>{
-    it('a string that counts down based on the number imputted', ()=>{
+    it('a string that counts down based on the number inputted', ()=>{
         expect(functions.annoyingSong(5)).toBe(`${5} bottles of soda on the wall, ${5} bottles of soda, take one down pass it around ${5 - 1} bottles of soda on the wall`);
     })
 });
@@ -80,6 +80,14 @@ describe('gradeFunction', ()=>{
     })
     it('expect F', ()=>{
         expect(functions.grade(59)).toBe('you got an F');
+    })
+});
+describe('vowelCounter', ()=>{
+    it('return 2 vowels for string Noops', ()=>{
+        expect(functions.vowelCounter("Noops")).toBe(2);
+    })
+    it('return 3 for string YUMMY despite caps', ()=>{
+        expect(functions.vowelCounter("YUMMY")).toBe(3);
     })
 });
 
