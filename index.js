@@ -151,23 +151,40 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer;
+let computerGuess = () =>{
+  let cmptGuess=Math.random();
+    if(cmptGuess >= 0 && cmptGuess < .33){
+        computer="paper";
+    }else if(cmptGuess >= .33 && cmptGuess < .66){
+        computer="scissors";
+    } else{
+        computer="rock";
+    }
+    return computer;
+    
+}
 
-function game(user, computer) {
+
+function game(user, computer){
+console.log("game function "+ computer)
   user = user.toLowerCase();
   computer = computer.toLowerCase();
   /*add your code here*/
-  if (user === computer) {
-    return "it's a tie";
-  } else if (user === "rock" && computer === "paper") {
-    return "you lose!";
-  } else if (user === "paper" && computer === "scissors") {
-    return "you lose!";
-  } else if (user === "scissors" && computer === "rock") {
-    return "you lose!";
+  if(user === computer){
+      return "it's a tie";
+  } else if (user === "rock" && computer === "paper" ){
+      return "you lose!";
+  }  else if (user === "paper" && computer === "scissors" ){
+      return "you lose!";
+  }  else if (user === "scissors" && computer === "rock" ){
+      return "you lose!";
   } else {
-    return "you win!";
+      return "you win!";
   }
 }
+
+console.log(game("rock", computerGuess()));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
