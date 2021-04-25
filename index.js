@@ -105,12 +105,8 @@ Use the hungryDog function and feeding requirements below to do the following:
 
 function hungryDog(dogWeight, dogAge) {
   /*add your code here*/
-  let dogIsAdult;
-  if (dogAge >= 1) {
-    dogIsAdult = true;
-  } else {
-    dogIsAdult = false;
-  }
+  let dogIsAdult = (dogAge >=1) ? true : false;
+ 
 
   if (dogIsAdult && dogWeight <= 5) {
     return dogWeight * 0.05;
@@ -124,8 +120,8 @@ function hungryDog(dogWeight, dogAge) {
     if (dogAge >= 0.165 && dogAge < 0.334) {
       return dogWeight * 0.1;
     } else if (dogAge >= 0.334 && dogAge < 0.584) {
-      return dogWeight * 0.5;
-    } else if (dogAge >= 0.584 && puppyAge < 1) {
+      return dogWeight * 0.05;
+    } else if (dogAge >= 0.584 && dogAge < 1) {
       return dogWeight * 0.04;
     }
   }
@@ -167,7 +163,6 @@ let computerGuess = () =>{
 
 
 function game(user, computer){
-console.log("game function "+ computer)
   user = user.toLowerCase();
   computer = computer.toLowerCase();
   /*add your code here*/
@@ -184,7 +179,7 @@ console.log("game function "+ computer)
   }
 }
 
-console.log(game("rock", computerGuess()));
+console.log("Computer guessed "+ computerGuess() +",",game("rock",computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
