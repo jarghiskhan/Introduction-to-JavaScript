@@ -108,18 +108,18 @@ function hungryDog(dogWeight, dogAge) {
 
   if (dogIsAdult && dogWeight <= 5) {
     return dogWeight * 0.05;
-  } else if (dogIsAdult && dogWeight >= 6 && dogWeight <= 10) {
+  } else if (dogIsAdult && dogWeight <= 10) {
     return dogWeight * 0.04;
-  } else if (dogIsAdult && dogWeight >= 11 && dogWeight <= 15) {
+  } else if (dogIsAdult && dogWeight <= 15) {
     return dogWeight * 0.03;
   } else if (dogIsAdult && dogWeight > 15) {
     return dogWeight * 0.02;
   } else {
     if (dogAge >= 0.165 && dogAge < 0.334) {
       return dogWeight * 0.1;
-    } else if (dogAge >= 0.334 && dogAge < 0.584) {
+    } else if (dogAge < 0.584) {
       return dogWeight * 0.05;
-    } else if (dogAge >= 0.584 && dogAge < 1) {
+    } else if (dogAge <= 1) {
       return dogWeight * 0.04;
     }
   }
